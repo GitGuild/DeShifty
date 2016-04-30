@@ -373,17 +373,20 @@ function pay_button_clicked(event) {
 
 	$('.form-submit').click(function(){
 		if($('.ssio-currency-dropdown').val() !== '---' && $('.ssio-currency-dropdown').val() !== 'btc') {
-			
-			var re_coin = $('.ssio-currency-dropdown').val();
-			if($('#amount').val().length == 0) {
-				window.setInterval(function(){
-				  getRates(re_coin);
-				}, 30000);
-			}
-			pay_button_clicked();
-			$('.status-window').animate({
-				height: '154px'
-			}, 500, 'easeInOutExpo');
+			if($('#destination-address').val() != ''){
+    			var re_coin = $('.ssio-currency-dropdown').val();
+    			if($('#amount').val().length == 0) {
+    				window.setInterval(function(){
+    				  getRates(re_coin);
+    				}, 30000);
+    			}
+    			pay_button_clicked();
+    			$('.status-window').animate({
+    				height: '154px'
+    			}, 500, 'easeInOutExpo');
+            }else{
+                show_error('Destination address is required.');
+            }
 		}
 		if($('.ssio-currency-dropdown').val() == 'btc') {
 			btc_pay();

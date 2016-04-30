@@ -1,127 +1,85 @@
 <!DOCTYPE html>
-
 <html>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>ShapeShift for Business | Shape Shift | The fastest way to swap cryptocurrencies. No account required.</title>
-    <link rel="icon" type="image/png" href="/fav_icon.png">
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link href="css/dd.css" rel="stylesheet" type="text/css">
-    <link href="css/payment.css" rel="stylesheet" type="text/css">
-</head>
-
-<body class="admin business">
+  <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>ShapeShift for Business | Shape Shift | The fastest way to swap cryptocurrencies. No account required.</title>
+      <link rel="icon" type="image/png" href="/fav_icon.png">
+      <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+      <link href="css/flexboxgrid.css" rel="stylesheet" type="text/css">
+      <link href="css/dd.css" rel="stylesheet" type="text/css">
+      <link href="css/payment.css" rel="stylesheet" type="text/css">
+  </head>
+  <body class="admin business">
     <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-
-
-    <div class="fluid-container">
-        <div class="panel panel-default">
-            <div class="panel-body">		
-				<div class="row">
-					
-					<div class="col-xs-4 coin-container">
-						<div class="left">
-							<div class="coin">
-								<strong>Shift To</strong>
-								<img src="images/coins/bitcoin.png">
-							</div>
-							<div id="qr-code">
-							</div>
-						</div>
-					</div>
-					<div class="col-xs-8 pull-right">
-						<div class="right">
-							<div class="input-form">
-								<div class="row">
-									<div class="col-xs-7">
-										<div class="form-item">
-											<select class='ssio-currency-dropdown'>
-												<option value='---'>Pay with:</option>" +
-												<option value='ltc' data-image='images/coins/litecoin.png'>Litecoin</option>
-												<option value='btc' data-image='images/coins/bitcoin.png'>Bitcoin</option>
-												<option value='ppc' data-image='images/coins/peercoin.png'>Peercoin</option>
-												<option value='doge' data-image='images/coins/dogecoin.png'>Dogecoin</option>
-												<option value='drk' data-image='images/coins/darkcoin.png'>Darkcoin</option>
-												<option value='nmc' data-image='images/coins/namecoin.png'>Namecoin</option>
-												<option value='ftc' data-image='images/coins/feathercoin.png'>Feathercoin</option>
-												<option value='bc' data-image='images/coins/blackcoin.png'>Blackcoin</option>
-											</select>							
-										</div>
-									</div>
-									<div class="col-xs-5 amount">
-										<div class="form-item">
-											<input type="text" class="form-control disabled" id="amount" placeholder="Amount (optional)">
-										</div>
-									</div>
-								</div>
-								<div class="form-item return-address-input">
-									<input type="text" class="form-control" id="return-address" placeholder="Return Address (optional)">
-								</div>
-								<div class="form-item email-input">
-									<input type="email" class="form-control" id="email" placeholder="Email for Receipt (optional)">
-								</div>
-								<div class="actions" style="text-align: right;">
-									<button class="btn btn-success form-submit">Submit</button>
-								</div>
-							</div>
-								<div class="instructions">
-									<p class="first"></p>
-									<p class="last"></p>
-								</div>
-						</div>
-					</div>
-				</div>
-					<div class="status-window">
-						<div class="status-message">
-							<p>5 LTC <img src="images/coins/litecoin.png"> was converted to 2 BTC <img src="images/coins/bitcoin.png"> and sent to <strong>1BTCorgHwCg6u2YSAWKgS17qUad6kHmtQW</strong></p>
-						</div>
-						<div class="status-inner">
-							<div class="deposit-address">
-								<strong>Deposit Address</strong> <span class="depo-address"></span>
-								<span class="pull-right timer"></span>
-							</div>
-							<ul class="list-unstyled inline" id="steps">
-								<li id="deposit" class="pending">
-									<span class="status"><span class="status-icon"></span></span>
-									<span class="glyphicon glyphicon-save"></span>
-									Awaiting Deposit</li>
-								<li id="exchange" class="pending">
-									<span class="status"><span class="status-icon"></span></span>
-									<span class="glyphicon glyphicon-transfer"></span>
-									Awaiting Exchange</li>
-								<li id="complete" class="pending">
-									<span class="status"><span class="status-icon"></span></span>
-									<span class="glyphicon glyphicon-ok"></span>
-									Complete</li>
-							</ul>
-						</div>
-					</div>
-					<div class="pane-header">
-						<div class="row">
-							<div class="payment-info col-xs-6">
-								<strong>Destination</strong>
-								<input value="" id="withdraw-address" class="form-control" disabled>
-							</div>
-							<div class="deposit-limit col-xs-2">
-								<strong>Deposit Limit</strong>
-								<p></p>
-							</div>
-							<div class="exchange-rate col-xs-4">
-								<strong>Exchange Rate</strong>
-								<p></p>
-							</div>
-						</div>
-					</div>	
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <div class="u-panel">
+      <div class="u-panel-content">
+        <div class="container">
+          <div class="row theme-panel-bg">
+            <div class="theme-panel-1 col-xs-12 col-sm-12 col-md-6 col-lg-6">
+              <div class="input-form">
+                <div class="row">
+                  <div class="col-xs-7">
+                    <div class="form-item" style="padding-right: 5px;">
+                      <select class='ssio-currency-dropdown'>
+                        <option value='---'>Pay with:</option>" +
+                        <option value='btc' data-image='images/coins/bitcoin.png'>Bitcoin</option>
+                        <option value='dash' data-image='images/coins/dash.png'>Dash</option>
+                        <option value='dollar' data-image='images/coins/dollar.png'>US Dollars</option>
+                      </select>           
+                    </div>
+                  </div>
+                  <div class="col-xs-5 amount">
+                    <div class="form-item">
+                      <input type="text" class="form-control disabled" id="amount" placeholder="Amount (optional)">
+                    </div>
+                  </div>
+                </div>
+                <div class="form-item return-address-input">
+                  <input type="text" class="form-control" id="return-address" placeholder="Return Address (optional)">
+                </div>
+                <div class="form-item email-input">
+                  <input type="email" class="form-control" id="email" placeholder="Email for Receipt (optional)">
+                </div>
+                <div class="actions no-responsive" style="text-align: right;">
+                  <button class="btn btn-success form-submit">Submit</button>
+                </div>
+              </div>
             </div>
+            <div class="theme-panel-2 col-xs-12 col-sm-12 col-md-6 col-lg-6">
+              <div class="input-form">
+                <input type="text" class="form-control" id="destination-address" placeholder="Destination" required="required">
+              </div>
+              <div class="form-picture">
+                <img src="images/coins/bitcoin.png" alt="Bitcoin" />
+              </div>
+              <div class="input-form">
+                <div class="actions allow-responsive" style="text-align: right;">
+                  <button class="btn btn-success form-submit">Submit</button>
+                </div>
+              </div>
+            </div>
+            <div class="theme-panel-3 col-xs-12 col-sm-12 col-md-12 col-lg-12">
+              <ul class="theme-list">
+                <li>
+                  <p>Deposit Limit</p>
+                  <p class="theme-text"></p>
+                </li>
+                <li>
+                  <p>Exchange Rate</p>
+                  <p class="theme-text"></p>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <p class="payment-footer" style="text-align:right;">Powered by ShapeShift.io <img width="40" style="position:relative;top:-3px;" class="logo" src="images/lens_icon.png"></p>
-    </div><!-- /container -->
+        <p class="payment-footer" style="text-align:right;">Dash <img width="20" style="position:relative;top:-3px;" class="logo" src="images/coins/dash.png"></p>
+      </div>
+    </div>
     <script type="text/javascript">
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
                 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -133,12 +91,12 @@
 
     </script>
     <script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
-	<script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
-	<script src="js/jquery.easing.js" type="text/javascript"></script>
-	<script src="js/jquery.dd.min.js" type="text/javascript"></script>
-	<script src="js/qrcode.js" type="text/javascript"></script>
-	<script src="js/payment.js" type="text/javascript"></script>
-</body>
+    <script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="js/jquery.easing.js" type="text/javascript"></script>
+    <script src="js/jquery.dd.min.js" type="text/javascript"></script>
+    <script src="js/qrcode.js" type="text/javascript"></script>
+    <script src="js/payment.js" type="text/javascript"></script>
+  </body>
 </html>
 
 

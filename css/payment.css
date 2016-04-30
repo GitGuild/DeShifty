@@ -2,7 +2,12 @@
 
 body {
 	color:#fff;
-	background:#28394d;
+	background:#EEEEEE;
+}
+
+body,
+html {
+	height: 100%;
 }
 
 .panel-body {
@@ -37,8 +42,6 @@ strong {
 
 	width:50.5%
 }
-
-
 
 .deposit-limit {
     border-left: 1px solid rgba(255, 255, 255, 0.08);
@@ -368,9 +371,149 @@ h4 {
 }
 
 .payment-footer {
+	color: #444444;
 	font-size:11px;
+	margin: 0 10px;
 }
 
+.u-panel {
+	display: table;
+	height: 100%;
+	max-width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.u-panel-content {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.theme-panel-bg {
+	background-color: white;
+	border: 2px solid #444444;
+	border-radius: 6px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.theme-panel-1 {
+	border-bottom: 2px solid #444444;
+	border-right: 0;
+	order: 1;
+}
+
+.theme-panel-2 {
+	background-color: #F0F0F0;
+	border-radius: 0 0 6px 6px;
+	order: 2;
+}
+
+.theme-panel-3 {
+	background-color: #D7D7D7;
+	border-bottom: 2px solid #444444;
+	border-radius: 6px 6px 0 0;
+	order: -1;
+}
+
+.theme-list {
+	display: flex;
+	margin: 0;
+	padding: 0;
+}
+
+.theme-list li {
+	list-style: none;
+	padding: 10px 20px;
+}
+
+.theme-list li p {
+	color: #444444;
+}
+
+.theme-text {
+	font-weight: bold;
+	font-size: 18px;
+}
+
+.input-form {
+	padding: 15px 10px;
+}
+
+.form-item {
+	margin-bottom: 15px;
+}
+
+.form-picture {
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.coin strong {
+	display:inline-block;
+	background:rgba(0,0,0,.3);
+	border-radius: 300px;
+	padding:0 15px;
+	margin-bottom:10px;
+	border:1px solid #212e3e;
+	font-weight: 500;
+}
+
+.payment-info {
+	width: 50.5%;
+}
+
+.deposit-limit {
+    border-left: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 1px 0 0 0 rgba(0, 0, 0, 0.5) inset;
+    min-height: 60px;
+}
+
+.left {
+	position: relative;
+	z-index:9;
+	padding:15px 40px;
+}
+
+.left .coin {
+	text-align: center;
+
+}
+
+.ssio-currency-dropdown {
+	width: 100%;
+}
+
+.no-responsive {
+	display: none;
+}
+
+.allow-responsive {
+	display: block;
+}
+
+@media only screen and (min-width: 64em) {
+	.theme-panel-1 {
+		border-right: 2px solid #444444;
+		border-bottom: 0;
+	}
+	.theme-panel-2 {
+		border-radius: 0 6px 0 0;
+	}
+	.theme-panel-3 {
+		border-bottom: 0;
+		border-top: 2px solid #444444;
+		border-radius: 0 0 6px 6px;
+		order: 3;
+	}
+	.no-responsive {
+		display: block;
+	}
+	.allow-responsive {
+		display: none;
+	}
+}
 
 /* Webkit spinner */
 
